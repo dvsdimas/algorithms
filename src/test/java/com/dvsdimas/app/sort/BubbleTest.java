@@ -63,4 +63,15 @@ public class BubbleTest extends TestCase {
         assertTrue(ArrayUtils.isSorted(array));
     }
 
+    public void testSort5() {
+
+        final int[] array = new int[] {1, 1, 1, 1};
+
+        final ISort sorter = new Bubble();
+
+        sorter.sort(array);
+
+        assertTrue(ArrayUtils.isSorted(array));
+    }
+
 }

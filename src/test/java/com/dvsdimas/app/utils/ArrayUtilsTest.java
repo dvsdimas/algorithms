@@ -49,6 +49,13 @@ public class ArrayUtilsTest extends TestCase {
         assertTrue(ArrayUtils.isSorted(array));
     }
 
+    public void testIsSorted4() {
+
+        final int[] array = new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+
+        assertTrue(ArrayUtils.isSorted(array));
+    }
+
     public void testNotSorted1() {
 
         final int[] array = new int[] {1, 0};
