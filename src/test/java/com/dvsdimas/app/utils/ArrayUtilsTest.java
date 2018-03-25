@@ -20,15 +20,54 @@ public class ArrayUtilsTest extends TestCase {
 
     public void testSwap() {
 
-        final int[] array = new int[2];
-
-        array[0] = 0;
-        array[1] = 1;
+        final int[] array = new int[] {0, 1};
 
         ArrayUtils.swap(array, 0, 1);
 
         assertEquals(1, array[0]);
         assertEquals(0, array[1]);
+    }
+
+    public void testIsSorted1() {
+
+        final int[] array = new int[] {0};
+
+        assertTrue(ArrayUtils.isSorted(array));
+    }
+
+    public void testIsSorted2() {
+
+        final int[] array = new int[] {0, 1};
+
+        assertTrue(ArrayUtils.isSorted(array));
+    }
+
+    public void testIsSorted3() {
+
+        final int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        assertTrue(ArrayUtils.isSorted(array));
+    }
+
+    public void testNotSorted1() {
+
+        final int[] array = new int[] {1, 0};
+
+        assertFalse(ArrayUtils.isSorted(array));
+    }
+
+    public void testNotSorted2() {
+
+        final int[] array = new int[] {0, -1, 1};
+
+        assertFalse(ArrayUtils.isSorted(array));
+    }
+
+    public void testNotSorted3() {
+
+        final int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 7};
+
+        assertFalse(ArrayUtils.isSorted(array));
     }
 
 }

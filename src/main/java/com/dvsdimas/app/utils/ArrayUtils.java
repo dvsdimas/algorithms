@@ -19,4 +19,13 @@ public final class ArrayUtils {
         array[j] = tmp;
     }
 
+    public static boolean isSorted(final int[] array) {
+
+        for (int i = 0; i <= array.length - 2; i++) {
+            if(array[i] > array[i + 1]) return false;
+        }
+
+        return true;
+    }
+
 }
