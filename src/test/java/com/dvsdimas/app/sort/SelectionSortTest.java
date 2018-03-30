@@ -9,18 +9,18 @@ import junit.framework.TestSuite;
  * Created by dmylnev on 26.03.18.
  */
 
-public class SelectionTest extends TestCase {
+public class SelectionSortTest extends TestCase {
 
-    public SelectionTest(String testName) {
+    public SelectionSortTest(String testName) {
         super(testName);
     }
 
     public static Test suite() {
-        return new TestSuite(SelectionTest.class);
+        return new TestSuite(SelectionSortTest.class);
     }
 
     private ISort getSorter() {
-        return new Selection();
+        return new SelectionSort();
     }
 
     public void testSort1() {

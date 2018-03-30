@@ -6,21 +6,21 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Created by dmylnev on 25.03.18.
+ * Created by dmylnev on 30.03.18.
  */
 
-public class BubbleTest extends TestCase {
+public class InsertionSortTest extends TestCase {
 
-    public BubbleTest(String testName) {
+    public InsertionSortTest(String testName) {
         super(testName);
     }
 
     public static Test suite() {
-        return new TestSuite(BubbleTest.class);
+        return new TestSuite(InsertionSortTest.class);
     }
 
     private ISort getSorter() {
-        return new Bubble();
+        return new InsertionSort();
     }
 
     public void testSort1() {

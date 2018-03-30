@@ -6,7 +6,7 @@ import com.dvsdimas.app.utils.ArrayUtils;
  * Created by dmylnev on 26.03.18.
  */
 
-public class Selection implements ISort {
+public class SelectionSort implements ISort {
 
     public void sort(int[] array) {
 
