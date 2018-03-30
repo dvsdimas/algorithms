@@ -13,64 +13,61 @@ abstract class AbstractSortTest {
 
     abstract ISort getSorter();
 
-    @Test
-    public void testSort1() {
-
-        final int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    private void doSort(final int[] array) {
 
         getSorter().sort(array);
 
         assertTrue(ArrayUtils.isSorted(array));
+    }
+
+    @Test
+    public void testSort1() {
+        doSort(new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
     }
 
     @Test
     public void testSort2() {
-
-        final int[] array = new int[] {9, 8, 7, 6, 5, 4, 3, 2, 1};
-
-        getSorter().sort(array);
-
-        assertTrue(ArrayUtils.isSorted(array));
+        doSort(new int[] {9, 8, 7, 6, 5, 4, 3, 2, 1});
     }
 
     @Test
     public void testSort3() {
-
-        final int[] array = new int[] {1, -1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        getSorter().sort(array);
-
-        assertTrue(ArrayUtils.isSorted(array));
+        doSort(new int[] {1, -1, 2, 3, 4, 5, 6, 7, 8, 9});
     }
 
     @Test
     public void testSort4() {
-
-        final int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, -5};
-
-        getSorter().sort(array);
-
-        assertTrue(ArrayUtils.isSorted(array));
+        doSort(new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, -5});
     }
 
     @Test
     public void testSort5() {
-
-        final int[] array = new int[] {1, 1, 1, 1};
-
-        getSorter().sort(array);
-
-        assertTrue(ArrayUtils.isSorted(array));
+        doSort(new int[] {1, 1, 1, 1});
     }
 
     @Test
     public void testSort6() {
+        doSort(new int[] {1});
+    }
 
-        final int[] array = new int[] {1};
+    @Test
+    public void testSort7() {
+        doSort(new int[] {5, 5, 5, 5, 5, 5, 6});
+    }
 
-        getSorter().sort(array);
+    @Test
+    public void testSort8() {
+        doSort(new int[] {6, 5, 5, 5, 5, 5, 5});
+    }
 
-        assertTrue(ArrayUtils.isSorted(array));
+    @Test
+    public void testSort9() {
+        doSort(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 1});
+    }
+
+    @Test
+    public void testSort10() {
+        doSort(new int[] {9, 8, 7, 6, 5, 4, 3, 2, 9});
     }
 
 }
