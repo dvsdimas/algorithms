@@ -6,7 +6,7 @@ import com.dvsdimas.app.utils.ArrayUtils;
  * Created by dmylnev on 25.03.18.
  */
 
-public class BubbleSort implements ISort {
+public final class BubbleSort implements ISort {
 
     public void sort(int[] array) {
 

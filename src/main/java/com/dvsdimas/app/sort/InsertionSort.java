@@ -4,7 +4,7 @@ package com.dvsdimas.app.sort;
  * Created by dmylnev on 30.03.18.
  */
 
-public class InsertionSort implements ISort {
+public final class InsertionSort implements ISort {
 
     public void sort(int[] array) {
 
