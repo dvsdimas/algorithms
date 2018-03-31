@@ -18,7 +18,7 @@ public class ArrayUtilsTest extends TestCase {
         return new TestSuite(ArrayUtilsTest.class);
     }
 
-    public void testSwap() {
+    public void testSwap1() {
 
         final int[] array = new int[] {0, 1};
 
@@ -26,6 +26,34 @@ public class ArrayUtilsTest extends TestCase {
 
         assertEquals(1, array[0]);
         assertEquals(0, array[1]);
+    }
+
+    public void testSwap2() {
+
+        final int[] array = new int[] {0, 1};
+
+        ArrayUtils.swap(array, 1, 1);
+
+        assertEquals(0, array[0]);
+        assertEquals(1, array[1]);
+    }
+
+    public void testSwap3() {
+
+        final int[] array = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        ArrayUtils.swap(array, 2, 7);
+
+        assertEquals(0, array[0]);
+        assertEquals(1, array[1]);
+        assertEquals(7, array[2]);
+        assertEquals(3, array[3]);
+        assertEquals(4, array[4]);
+        assertEquals(5, array[5]);
+        assertEquals(6, array[6]);
+        assertEquals(2, array[7]);
+        assertEquals(8, array[8]);
+        assertEquals(9, array[9]);
     }
 
     public void testIsSorted1() {
