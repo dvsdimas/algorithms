@@ -8,6 +8,10 @@ import com.dvsdimas.app.utils.ArrayUtils;
 
 public final class BubbleSort implements ISort {
 
+    public final static BubbleSort SORTER = new BubbleSort();
+
+    private BubbleSort() {}
+
     public void sort(int[] array) {
 
         for(int sorted = array.length - 1; sorted > 0; sorted--) {

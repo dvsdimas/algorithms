@@ -8,6 +8,6 @@ public final class ShellSortTest extends AbstractSortTest {
 
     @Override
     ISort getSorter() {
-        return new ShellSort();
+        return ShellSort.SORTER;
     }
 }

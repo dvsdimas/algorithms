@@ -8,6 +8,10 @@ import com.dvsdimas.app.utils.ArrayUtils;
 
 public final class SelectionSort implements ISort {
 
+    public final static SelectionSort SORTER = new SelectionSort();
+
+    private SelectionSort() {}
+
     public void sort(int[] array) {
 
         for(int sorted = array.length - 1; sorted > 0; sorted--) {

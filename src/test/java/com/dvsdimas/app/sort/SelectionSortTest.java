@@ -8,7 +8,7 @@ public final class SelectionSortTest extends AbstractSortTest {
 
     @Override
     ISort getSorter() {
-        return new SelectionSort();
+        return SelectionSort.SORTER;
     }
 
 }

@@ -8,6 +8,6 @@ public final class InsertionSortTest extends AbstractSortTest {
 
     @Override
     ISort getSorter() {
-        return new InsertionSort();
+        return InsertionSort.SORTER;
     }
 }

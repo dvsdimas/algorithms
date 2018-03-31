@@ -6,6 +6,10 @@ package com.dvsdimas.app.sort;
 
 public final class InsertionSort implements ISort {
 
+    public final static InsertionSort SORTER = new InsertionSort();
+
+    private InsertionSort() {}
+
     public void sort(int[] array) {
 
         for(int unsorted = 1; unsorted < array.length; unsorted++) {

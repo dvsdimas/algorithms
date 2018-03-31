@@ -6,6 +6,10 @@ package com.dvsdimas.app.sort;
 
 public final class ShellSort implements ISort {
 
+    public final static ShellSort SORTER = new ShellSort();
+
+    private ShellSort() {}
+
     public void sort(int[] array) {
 
         for(int gap = array.length / 2; gap > 0; gap /= 2) {

@@ -8,7 +8,7 @@ public final class BubbleSortTest extends AbstractSortTest {
 
     @Override
     ISort getSorter() {
-        return new BubbleSort();
+        return BubbleSort.SORTER;
     }
 
 }
