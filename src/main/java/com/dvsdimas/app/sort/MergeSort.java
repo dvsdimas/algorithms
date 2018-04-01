@@ -17,12 +17,6 @@ public final class MergeSort implements ISort {
 
     private static void sort(final int[] array, final int begin, final int end) {
 
-        if(array.length < 1) throw new IllegalArgumentException("array.length less than one !");
-        if(begin < 0) throw new IllegalArgumentException("begin index less than zero ! [" + begin + "]");
-        if(end < 0) throw new IllegalArgumentException("end index less than zero ! [" + end + "]");
-        if(begin > end) throw new IllegalArgumentException("begin index more than end index ! begin[" + begin + "], end [" + end + "]");
-        if(end > array.length) throw new IllegalArgumentException("end index more than length of the array ! [" + end + "]");
-
         if( (end - begin) == 1) return;
 
         final int mid = (begin + end)  / 2;
@@ -34,14 +28,6 @@ public final class MergeSort implements ISort {
     }
 
     private static void merge(final int[] array, final int begin, final int mid, final int end) {
-
-        if(array.length < 1) throw new IllegalArgumentException("array.length less than one !");
-        if(begin < 0) throw new IllegalArgumentException("begin index less than zero ! [" + begin + "]");
-        if(end < 0) throw new IllegalArgumentException("end index less than zero ! [" + end + "]");
-        if(begin > end) throw new IllegalArgumentException("begin index more than end index ! begin[" + begin + "], end [" + end + "]");
-        if(end > array.length) throw new IllegalArgumentException("end index more than length of the array ! [" + end + "]");
-        if(begin > mid) throw new IllegalArgumentException("begin index more than mid index ! begin[" + begin + "], mid [" + mid + "]");
-        if(mid > end) throw new IllegalArgumentException("mid index more than end index ! mid[" + mid + "], end [" + end + "]");
 
         if(array[mid - 1] <= array[mid]) return; // two parts are already sorted
 
