@@ -10,7 +10,7 @@ public final class InsertionSort implements ISort {
 
     private InsertionSort() {}
 
-    public void sort(int[] array) {
+    public void sort(final int[] array) {
 
         for(int unsorted = 1; unsorted < array.length; unsorted++) {
 

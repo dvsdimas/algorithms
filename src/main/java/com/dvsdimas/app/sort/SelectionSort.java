@@ -12,7 +12,7 @@ public final class SelectionSort implements ISort {
 
     private SelectionSort() {}
 
-    public void sort(int[] array) {
+    public void sort(final int[] array) {
 
         for(int sorted = array.length - 1; sorted > 0; sorted--) {
 

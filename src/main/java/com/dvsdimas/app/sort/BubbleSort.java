@@ -12,7 +12,7 @@ public final class BubbleSort implements ISort {
 
     private BubbleSort() {}
 
-    public void sort(int[] array) {
+    public void sort(final int[] array) {
 
         for(int sorted = array.length - 1; sorted > 0; sorted--) {
 

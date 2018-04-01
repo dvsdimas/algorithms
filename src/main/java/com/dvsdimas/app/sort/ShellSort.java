@@ -10,7 +10,7 @@ public final class ShellSort implements ISort {
 
     private ShellSort() {}
 
-    public void sort(int[] array) {
+    public void sort(final int[] array) {
 
         for(int gap = array.length / 2; gap > 0; gap /= 2) {
 
