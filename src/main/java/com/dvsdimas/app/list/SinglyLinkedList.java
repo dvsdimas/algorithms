@@ -23,7 +23,7 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    public @Nullable T get(final int id) {
+    public @Nonnull T get(final int id) {
 
         if((id < 0) || (id >= size)) throw new IllegalArgumentException("id [" + id + "] out of bound exception");
 
