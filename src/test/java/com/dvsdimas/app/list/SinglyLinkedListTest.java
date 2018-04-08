@@ -27,6 +27,8 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(1, list.getSize());
         Assert.assertTrue(!list.isEmpty());
 
+        Assert.assertEquals(element1, list.get(0));
+
 
         final String element2 = "asfafdadfaDWA";
 
@@ -35,12 +37,18 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(2, list.getSize());
         Assert.assertTrue(!list.isEmpty());
 
+        Assert.assertEquals(element2, list.get(0));
+        Assert.assertEquals(element1, list.get(1));
+
+
 
         final String ret2 = list.remove();
 
         Assert.assertEquals(1, list.getSize());
         Assert.assertTrue(!list.isEmpty());
         Assert.assertEquals(element2, ret2);
+
+        Assert.assertEquals(element1, list.get(0));
 
 
         final String ret1 = list.remove();

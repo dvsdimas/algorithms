@@ -23,6 +23,25 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    public @Nullable T get(final int id) {
+
+        if((id < 0) || (id >= size)) throw new IllegalArgumentException("id [" + id + "] out of bound exception");
+
+        if(isEmpty()) throw new IllegalStateException("Cannot get element from empty list");
+
+        Node current = head;
+
+        for (int i = 0; i < size; i++) {
+            if(i == id) {
+                return current.value;
+            } else {
+                current = current.next;
+            }
+        }
+
+        throw new IllegalStateException("Cannot get element with id[" + id + "] from the list");
+    }
+
     public void add(@Nonnull final T element) {
 
         Objects.requireNonNull(element);
