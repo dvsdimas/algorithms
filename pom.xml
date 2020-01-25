@@ -11,23 +11,23 @@
     <name>algorithms</name>
 
     <properties>
-        <java.source>1.8</java.source>
-        <java.target>1.8</java.target>
+        <java.source>11</java.source>
+        <java.target>11</java.target>
     </properties>
 
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <showDeprecation>true</showDeprecation>
                     <showWarnings>true</showWarnings>
                     <verbose>true</verbose>
                     <source>${java.source}</source>
                     <target>${java.target}</target>
+                    <fork>true</fork>
                     <encoding>UTF8</encoding>
                 </configuration>
             </plugin>
