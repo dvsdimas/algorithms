@@ -13,6 +13,11 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 public class SortingBenchmark {
 
+    private static final int LEN = 1000;
+
+    private static @Nonnull final String SORTED = "SORTED";
+    private static @Nonnull final String REVERS_SORTED = "REVERS_SORTED";
+
     private @Nonnull final static Map<String, ISort> sorters = Map.of(BubbleSort.class.getSimpleName(),    BubbleSort.SORTER,
                                                                       ShellSort.class.getSimpleName(),     ShellSort.SORTER,
                                                                       SelectionSort.class.getSimpleName(), SelectionSort.SORTER,
@@ -23,21 +28,28 @@ public class SortingBenchmark {
     @Param({"BubbleSort", "ShellSort", "SelectionSort", "InsertionSort", "QuickSort", "MergeSort"})
     private String name;
 
-    @Param({"1", "2"})
-    private int id;
+    @Param({SORTED, REVERS_SORTED})
+    private String type;
 
     private ISort sorter;
     private int[] arr;
 
     @Setup
     public void setup() {
+
         sorter = sorters.get(name);
 
-        if(id == 1) {
-            arr = new int[]{30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-        } else if(id == 2) {
-            arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30};
-        }
+        arr = new int[]{LEN};
+
+        if(SORTED.equals(name)) {
+
+            for(int i = 0; i < LEN; i++) arr[i] = i;
+
+        } else if(REVERS_SORTED.equals(name)) {
+
+            for(int i = LEN - 1; i >= 0; i--) arr[i] = i;
+
+        } else throw new IllegalArgumentException();
     }
 
     @Benchmark
