@@ -13,6 +13,8 @@
     <properties>
         <java.source>11</java.source>
         <java.target>11</java.target>
+
+        <jmh.version>1.23</jmh.version>
     </properties>
 
     <build>
@@ -34,6 +36,16 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>${jmh.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>${jmh.version}</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
